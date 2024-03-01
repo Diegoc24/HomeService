@@ -1,0 +1,7 @@
+const budget = require("./model/budget")
+const admin = require("./model/admin")
+const bill = require("./model/bill")
+const client = require("./model/client")
+const contact = require("./model/contact")
+const job = require("./model/job")
+const employee = require("./model/employee")

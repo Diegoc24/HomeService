@@ -14,14 +14,13 @@ const {
 
 
     
-    const sequelize = new Sequelize(`postgres://postgres:123456@localhost:5432/HomeService`,{
+    const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,{
     logging: false,
     native: false,
     dialectModule: pg,
 })
 
 
-// admin.hasMany(client, {foreignKey: "admin_id"})
-// client.belongsTo(admin, {foreignKey: "admin_id"})
+
 
 module.exports = sequelize;

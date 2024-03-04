@@ -3,9 +3,9 @@ const {DataTypes} = require("sequelize")
 
 const client = sequelize.define("client", {
     dni:{
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
-        unique: true
+        
     },
     name: {
         type: DataTypes.STRING,
@@ -35,7 +35,7 @@ const client = sequelize.define("client", {
     },
     review:{
         type: DataTypes.ARRAY(DataTypes.INTEGER),
-        allowNull: false
+        allowNull: true
     },
     comment:{
         type: DataTypes.TEXT,

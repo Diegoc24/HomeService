@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3001
 
 
 
-sequelize.sync({force: true}).then(()=>{
+sequelize.sync({force: false}).then(()=>{
     console.log("database connected");
     server.listen(PORT, ()=>{
         console.log(`listening in port ${PORT}`);

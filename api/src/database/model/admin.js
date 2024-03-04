@@ -13,7 +13,8 @@ const admin = sequelize.define("admin", {
     },
     email:{
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true
     },
     position:{
         type: DataTypes.STRING,
@@ -23,9 +24,18 @@ const admin = sequelize.define("admin", {
         type: DataTypes.STRING,
         allowNull: false
     },
+    password:{
+        type: DataTypes.STRING,
+        allowNull: false
+    },
     phone:{
         type: DataTypes.STRING,
         allowNull: false
+    },
+    is_admin:{
+        type: DataTypes.BOOLEAN,
+        allowNull: false,
+        defaultValue: false
     }
    
 })

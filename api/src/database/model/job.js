@@ -12,11 +12,24 @@ const job = sequelize.define("job", {
     },
     price:
     {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    total_price:
+    {
+        type: DataTypes.INTEGER,
         allowNull: false
     },
     condition: {
         type: DataTypes.STRING,
+        allowNull: false
+    },
+    startDate:{
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+    dateFinish:{
+        type: DataTypes.DATE,
         allowNull: false
     },
     review: {

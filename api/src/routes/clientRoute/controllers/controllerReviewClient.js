@@ -19,9 +19,10 @@ console.log("entro");
         oldReview = []
     }
     const newReview = [review, ...oldReview]
+    const average = newReview.reduce((a, b) => a + b, 0) / newReview.length
     const updateReview = await client.update({review: newReview}, {where: {id: id}, returning: true} )
 
-    return updateReview
+    return {reviews: updateReview, average: average}
 
 
 }
